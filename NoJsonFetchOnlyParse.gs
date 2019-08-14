@@ -3,6 +3,9 @@ function JsonToItemz() {
 
     const spr = SpreadsheetApp.getActiveSpreadsheet();
     const sheet = spr.getActiveSheet();
+  
+    sheet.getRange('A:A').clear() //empties priveus values
+  
     const column = sheet.getRange('B2:K2');
     const values = column.getValues(); // get all data in one call
     var Jsons = [];
